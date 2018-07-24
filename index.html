@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>My first AngularJS App</title>
+  </head>
+  <body ng-app="AppAngular">
+    <h1>Tyring out Angular 1</h1>
+
+    <div ng-controller="GameEnListController as games">
+<h3>Add a game</h3>
+<input type="text" ng-model ="games.name" placeholder="Game Name">
+
+<input type="text" ng-model ="games.year" placeholder="Game Year">
+<button ng-click = "games.addGame();">Enlist Game</button>
+</div>
+  <div ng-controller="GameListController as showList">
+    <br/>
+    <h3>List</h3>
+    <ol>
+  <li ng-repeat ="game in showList.allGames">{{$index +1}}. Game - {{game.name}}, Year - {{game.year}}
+</ol>
+    </div>
+
+   <!--<div ng-controller="AppAngularController">
+      <p>Game Name:</p>
+      <input type="text" ng-model ="gName" ng-keyup ="displayNumeric();">
+      {{gName}}
+      Total value : {{totalNumeric}}
+    </div>
+    <br/>
+    <div ng-controller="DIController">
+      <p>Game Name:</p>
+      <input type="text" ng-model ="name" ng-blur ="upper();">
+
+
+    </div>
+    <br/>
+   <div ng-controller="ImageFlipController">
+      <p>My least favourite superhero is : {{hero}}</p>
+      <br/>
+      <p>{{sayMessage() }}</p>
+      <p>{{tagLine |uppercase}}</p>
+   <button ng-click = "flipHero();">Change my Fav SuperHero </button>
+      <img ng-src ="images/{{hero}}.jpg">
+    <br/>
+    <ul>
+    <li ng-repeat ="item in gameList">{{$index +1}}. Game - {{item.name}}, Year - {{item.year}}
+    </ul>
+  <input type="text" ng-model ="gameName" placeholder="Game Name">
+
+  <input type="text" ng-model ="gameYear" placeholder="Game Year">
+<button ng-click="addGame();" >Add Game</button>
+    </div>-->
+
+
+  </body>
+</html>
